@@ -1,6 +1,3 @@
-
-
-
 const express = require('express');
 const mysql = require('mysql'); 
 const cors = require('cors');
@@ -20,7 +17,7 @@ const db = mysql.createConnection({
 app.get('/api', (req,res) => {
     return res.json({users: ["user1", "user2", "user3"]});
 })
-
+/*
 app.get('/users', (req,res) => {
   const sql = "Select * from Users" ;
   db.query(sql,(err,data) => {
@@ -115,7 +112,7 @@ app.patch('/users1/:id', (req, res) => {
     });
 });
 
-
+*/
 app.listen(5000, () => {
     console.log("Server is running on port 5000");
 });
